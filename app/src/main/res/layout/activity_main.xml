@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/cardtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/bg_back"
+            android:src="@drawable/baseline_chevron_left_24" />
+
+        <TextView
+            android:id="@+id/titlePaket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/back"
+            android:text="TRANSAKSI"
+            android:textColor="@color/tosca"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tepaket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titlePaket"
+            android:layout_marginBottom="15dp"
+            android:layout_toEndOf="@id/back"
+            android:text="Manfaatkan uang sebaik mungkin"
+            android:textColor="@color/tosca"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+
+    <ImageButton
+        android:id="@+id/filter"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/bottom"
+        android:layout_alignTop="@id/bottom"
+        android:layout_alignParentEnd="true"
+        android:background="@color/white"
+        android:elevation="10dp"
+        android:src="@drawable/baseline_search_24" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_months"
+        android:layout_below="@id/cardtitle"/>
+
+    <ListView
+        android:id="@+id/customlistcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bottom"
+        android:layout_marginHorizontal="25dp"
+        android:layout_above="@id/tebottomseet"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"/>
+
+
+    <TextView
+        android:id="@+id/tebottomseet"
+        android:layout_above="@id/bottomseet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pengeluaran bulan ini"
+        android:textColor="@color/tosca"
+        android:layout_marginLeft="45dp"
+        android:textSize="12dp"/>
+
+    <RelativeLayout
+        android:id="@+id/bottomseet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="25dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btnadd"
+            android:background="@drawable/shapebottom">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="150dp"
+                android:text="Rp 150.000"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+
+
+        <ImageButton
+            android:id="@+id/btnadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:background="@color/white"
+            android:src="@drawable/btn_addnabung" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
